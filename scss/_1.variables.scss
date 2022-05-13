@@ -1,0 +1,31 @@
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Colors *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+// Light Color Palette (Custom Properties)
+
+  $primary: rgb(68, 106, 231);
+  $primary-m: rgba(68, 106, 231, 0.6);
+  // --color-secondary: hsl(274, 99%, 72%);
+  // --color-secondary-m: hsl(274, 99%, 72%, 0.6);
+  $tertiary: rgb(241, 241, 241);
+  $tertiary-m: rgba(241, 241, 241, 0.6);
+  $dark: rgb(0, 0, 0);
+  // --color-quaternary: rgb(255, 235, 153);
+  // --color-quaternary-m: rgba(192, 162, 43, 0.65);
+  // --color-quinary: white;
+  // --color-quinary-m: rgba(255, 255, 255, 0.5);
+
+  $font-xsm: 1.2rem;
+  $font-sm: 1.4rem;
+
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Break Points *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+// $break-points: (
+//   "break-point-small": 630px,
+//   "break-point-medium": 765px,
+//   "break-point-tablet": 965px,
+//   "break-point-desktop": 1300px,
+// );
+
+// @function break-point($break-point-limit) {
+//   @return map-get($break-points, $break-point-limit);
+// }

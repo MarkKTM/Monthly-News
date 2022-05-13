@@ -1,0 +1,74 @@
+.main-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding-top: 2rem;
+  border-bottom: 1px solid #000;
+}
+
+.icon-fb {
+  position: absolute;
+  font-size: 3.5rem;
+  padding: .2rem .2rem;
+  line-height: 1;
+  top: .6rem;
+  left: 0;
+}
+
+.main-header__mid {
+  text-align: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-family: 'Prata', serif;
+  line-height: 1.2;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.tagline {
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 575px) {
+
+  .month-p,
+  .distribution-p {
+    display: none;
+  }
+
+}
+
+.month-p,
+.distribution-p {
+  margin-bottom: 0;
+}
+
+
+@media screen and (min-width: 576px) {
+  .main-header__left {
+    width: 30%;
+    align-self: flex-end;
+  }
+
+  .main-header__mid {
+    width: 40%;
+    align-self: flex-end;
+  }
+
+  .main-header__right {
+    width: 30%;
+    text-align: right;
+    align-self: flex-end;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  
+}
+

@@ -1,0 +1,120 @@
+:root {
+  font-size: 62.5%;
+}
+
+::selection {
+  background-color: $primary;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  // background-color: $primary;
+}
+
+.container {
+  max-width: 1500px;
+  min-height: 100vh;
+  padding: 0 1rem 2rem;
+  margin: 0 auto;
+}
+
+//*-*-*-*-*-*-*-*-*-*-- Break Point max width: 575px *-*-*-*-*-*-*-*-*-*-*
+@include media-tablet {
+  
+      
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 630px Break Point *-*-*-*-*-*-*-*-*-*-*
+@include media-small {
+  
+}
+
+.bot-marg0 {
+  margin-bottom: 0;
+}
+
+.bot-marg0 {
+  margin-bottom: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  color: $tertiary;
+}
+
+.fxsmall {
+  font-size: $font-xsm
+}
+
+.fsmall {
+  font-size: $font-sm;
+}
+
+h1, h2, h3 {
+  font-family: 'Klee One', cursive;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+  margin-bottom: 2.5rem
+}
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: .2rem;
+  margin-bottom: 2.5rem
+}
+
+h3 {
+  font-size: 2.5rem;
+  letter-spacing: .2rem;
+  margin-bottom: 2.5rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  letter-spacing: .1rem;
+  margin-bottom: 2rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  margin-bottom: 3rem;
+}
+
+// Form Elements
+.form-control {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+input, textarea {
+  border: none;
+  border: 2px solid $primary;
+  border-color: $primary;
+}
+
+input, select, textarea, button {
+  display: block;
+  line-height: 2.4rem;
+  width: 100%;
+  padding: 1.1rem;
+  margin: 0;
+}

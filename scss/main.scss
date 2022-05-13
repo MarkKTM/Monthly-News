@@ -1,0 +1,48 @@
+//*-*-*-*-*-*-*-*-*-*-- The 1300px Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-desktop {
+  @media screen and (min-width: break-point(break-point-desktop)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 965px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-tablet {
+  @media screen and (max-width: break-point(break-point-tablet)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 765px Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-medium {
+  @media screen and (max-width: break-point(break-point-medium)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 630px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-small {
+  @media screen and (max-width: break-point(break-point-small)) {
+    @content;
+  }
+}
+
+@import "1.variables";
+@import "2.utilities";
+@import "3.header";
+@import "4.navigation";
+// @import "4.intro";
+// @import "5.about";
+// @import "6.experience";
+// @import "7.projects";
+// @import "8.contact";
+// @import "9.modal";
+
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Placeholder Styles *-*-*-*-*-*-*-*-*-*-*-*-*
+
+// Section Padding
+%sec-padding {
+  padding: 6rem 1rem;
+}
+
+
+
