@@ -1,2 +1,2 @@
-# Monthly-News
+# News-Plus
 A monthly news website
