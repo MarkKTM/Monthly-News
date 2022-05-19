@@ -3,6 +3,7 @@
 }
 
 ::selection {
+  color: $tertiary;
   background-color: $primary;
 }
 
@@ -28,6 +29,12 @@ body {
 //*-*-*-*-*-*-*-*-*-*-- The 630px Break Point *-*-*-*-*-*-*-*-*-*-*
 @include media-small {
   
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .bot-marg0 {

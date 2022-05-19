@@ -24,7 +24,8 @@
 
 .logo {
   font-size: 3rem;
-  font-family: 'Prata', serif;
+  $font-sans-serif: $font-sans-serif;
+  ;
   line-height: 1.2;
   margin-bottom: 0;
   font-weight: bold;
@@ -34,7 +35,7 @@
   line-height: 1.4;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 576px) {
 
   .month-p,
   .distribution-p {
@@ -50,6 +51,11 @@
 
 
 @media screen and (min-width: 576px) {
+  .month-p,
+  .distribution-p {
+    display: block;
+  }
+
   .main-header__left {
     width: 30%;
     align-self: flex-end;
@@ -65,10 +71,6 @@
     text-align: right;
     align-self: flex-end;
   }
-  
-}
-
-@media screen and (min-width: 768px) {
   
 }
 
