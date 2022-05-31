@@ -7,8 +7,27 @@
 
 .teaser {
   padding: 0 2rem 1rem 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #000;
+  margin-bottom: 1rem;  
+}
+
+.teaser::after {
+  content: "";
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px;
+  bottom: -1rem;
+  margin: 0 20px;
+}
+
+.teasers-right .teaser:last-child:after {
+  border: none;
+}
+
+.teaser > p {
+  // text-align: justify;
+  text-justify: inter-word;
+
 }
 
 .img-v > img,
@@ -56,14 +75,22 @@
     -ms-flex-direciton: row;
   }
 
+  .teasers-left {
+    border-right: 1px solid #ccc;
+  }
+
   .teasers-right > .teaser {
     padding-left: 2rem;
   }
 
-  .img-v,
-  .img-h {    
-    // float: none;
-    padding: 0 0 2rem 2rem;
+  .teasers-left .teaser:last-child:after {
+    border: none;
   }
+
+  // .img-v,
+  // .img-h {    
+  //   // float: none;
+  //   padding: 0 0 2rem 2rem;
+  // }
   
 }

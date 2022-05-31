@@ -15,7 +15,7 @@ body {
 .container {
   max-width: 1500px;
   min-height: 100vh;
-  padding: 0 1rem 2rem;
+  padding: 0 1rem 0;
   margin: 0 auto;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Klee One", cursive;
+  font-family: "Prata", serif;
   font-weight: 300;
 }
 
@@ -62,7 +62,6 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  letter-spacing: 0.2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -138,7 +137,8 @@ input, select, textarea, button {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 2.6rem;
+  font-family: "Prata", serif;
   line-height: 1.2;
   margin-bottom: 0;
   font-weight: bold;
@@ -339,7 +339,24 @@ input, select, textarea, button {
 .teaser {
   padding: 0 2rem 1rem 2rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #000;
+}
+
+.teaser::after {
+  content: "";
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px;
+  bottom: -1rem;
+  margin: 0 20px;
+}
+
+.teasers-right .teaser:last-child:after {
+  border: none;
+}
+
+.teaser > p {
+  text-justify: inter-word;
 }
 
 .img-v > img,
@@ -378,12 +395,40 @@ input, select, textarea, button {
     -ms-flex-direciton: row;
   }
 
+  .teasers-left {
+    border-right: 1px solid #ccc;
+  }
+
   .teasers-right > .teaser {
     padding-left: 2rem;
   }
 
-  .img-v,
-.img-h {
-    padding: 0 0 2rem 2rem;
+  .teasers-left .teaser:last-child:after {
+    border: none;
+  }
+}
+footer {
+  padding: 7rem 1rem;
+  background-color: rgb(237, 237, 237);
+}
+
+.member {
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .team > div {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 992px) {
+  .team {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .team > div {
+    flex-basis: 50%;
   }
 }/*# sourceMappingURL=main.css.map */

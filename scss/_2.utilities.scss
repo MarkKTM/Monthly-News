@@ -16,7 +16,7 @@ body {
 .container {
   max-width: 1500px;
   min-height: 100vh;
-  padding: 0 1rem 2rem;
+  padding: 0 1rem 0;
   margin: 0 auto;
 }
 
@@ -62,7 +62,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Klee One', cursive;
+  // font-family: 'Klee One', cursive;
+  font-family: $font-sans-serif;
   font-weight: 300;
 }
 
@@ -74,7 +75,6 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  letter-spacing: .2rem;
   margin-bottom: 2.5rem
 }
 
