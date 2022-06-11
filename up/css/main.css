@@ -55,19 +55,18 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
-  font-size: 2.5rem;
-  letter-spacing: 0.2rem;
+  font-size: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -329,16 +328,59 @@ input, select, textarea, button {
     padding: 0.7rem 0.5rem;
   }
 }
-.teasers {
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
+.top-ads {
   padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 
+.top-ads > figure {
+  margin-bottom: 0;
+}
+
+.top-ads > figure:nth-child(2),
+.top-ads > figure:nth-child(3),
+.top-ads > figure:nth-child(4) {
+  display: none;
+}
+
+.top-ads__box > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .top-ads {
+    display: flex;
+  }
+
+  .top-ads__box {
+    width: 50%;
+  }
+
+  .top-ads > figure:nth-child(2) {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .top-ads__box {
+    width: 33.33%;
+  }
+
+  .top-ads > figure:nth-child(3) {
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .top-ads {
+    flex-wrap: nowrap;
+  }
+
+  .top-ads > figure:nth-child(4) {
+    display: block;
+  }
+}
 .teaser {
-  padding: 0 2rem 1rem 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .teaser::after {
@@ -347,64 +389,64 @@ input, select, textarea, button {
   display: block;
   border: 1px solid #ccc;
   border-width: 0 0 1px;
-  bottom: -1rem;
+  bottom: -1.75rem;
   margin: 0 20px;
+  clear: both;
 }
 
-.teasers-right .teaser:last-child:after {
-  border: none;
+.teaser__img--h {
+  width: 155px;
 }
 
-.teaser > p {
-  text-justify: inter-word;
+.teaser__img--v {
+  width: 155px;
 }
 
-.img-v > img,
-.img-h > img {
-  width: 100%;
+.teaser__img--floatl {
+  float: left;
+  padding: 0 1rem 0.5rem 0;
 }
 
-@media screen and (min-width: 576px) {
-  .img-v {
-    float: right;
-    width: calc(35% + 6vw);
-  }
-
-  .img-h {
-    float: right;
-    width: calc(45% + 6vw);
-  }
-
-  .img-h,
-.img-v {
-    padding: 0 0 1rem 1rem;
-  }
+.teaser__heading {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
 }
+
 @media screen and (min-width: 768px) {
-  .img-v {
-    width: calc(25% + 5vw);
+  .teasers > div {
+    display: flex;
   }
 
-  .img-h {
-    width: calc(35% + 5vw);
-  }
-}
-@media screen and (min-width: 992px) {
-  .teasers {
-    flex-direction: row;
-    -ms-flex-direciton: row;
+  .teaser {
+    width: 50%;
+    margin-bottom: 1rem;
   }
 
-  .teasers-left {
-    border-right: 1px solid #ccc;
+  .teaser::after {
+    display: none;
   }
 
-  .teasers-right > .teaser {
+  .teaser::before {
+    content: "";
+    position: relative;
+    display: block;
+    border: 1px solid #ccc;
+    border-width: 0 0 1px;
+    top: -2rem;
+    margin: 0 20px;
+  }
+
+  .teasers > div:first-child .teaser::before {
+    display: none;
+  }
+
+  .teasers > div .teaser:first-child {
+    padding-right: 2rem;
+  }
+
+  .teasers > div .teaser:last-child {
     padding-left: 2rem;
-  }
-
-  .teasers-left .teaser:last-child:after {
-    border: none;
   }
 }
 footer {
@@ -414,21 +456,69 @@ footer {
 
 .member {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
+@media screen and (max-width: 576px) {
+  .member::after {
+    content: "";
+    position: relative;
+    display: block;
+    border: 1px solid #ccc;
+    border-width: 0 0 1px;
+    bottom: -1.5rem;
+    margin: 0 50px;
+  }
+}
 @media screen and (min-width: 576px) {
   .team > div {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  }
+
+  .member {
+    text-align: left;
+    width: 275px;
+    padding: 0 1rem;
+  }
+
+  .team > div:first-child .member::after {
+    content: "";
+    position: relative;
+    display: block;
+    border: 1px solid #ccc;
+    border-width: 0 0 1px;
+    bottom: -1.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .member {
+    width: 35%;
+    padding: 0 2rem;
   }
 }
 @media screen and (min-width: 992px) {
+  footer {
+    padding: 7rem 4rem;
+  }
+
   .team {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .team > div {
     flex-basis: 50%;
+  }
+
+  .team > div:first-child .member::after {
+    display: none;
+  }
+
+  .member {
+    width: 50%;
+    padding: 0 2rem;
   }
 }/*# sourceMappingURL=main.css.map */

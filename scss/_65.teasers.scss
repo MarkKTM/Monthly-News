@@ -6,8 +6,18 @@
 }
 
 .teaser {
-  padding: 0 2rem 1rem 2rem;
+  padding: 0 0 1rem 0;
   margin-bottom: 1rem;  
+}
+
+.teaser:first-child::before {
+  content: "";
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px;
+  top: -10px;
+  margin: 0 20px;
 }
 
 .teaser::after {
@@ -25,36 +35,52 @@
 }
 
 .teaser > p {
-  // text-align: justify;
   text-justify: inter-word;
 
 }
 
 .img-v > img,
-  .img-h > img {
-    width: 100%;
-  }
+.img-h > img {
+  width: 100%;
+}
+
+figcaption {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: 600;
+  padding: 1rem .7rem 0;
+}
 
 @media screen and (max-width: 576px) {
   
 }
 
 @media screen and (min-width: 576px) {
+
+  .float-left {
+    float: left;
+    padding: 0 1rem 1rem 0;
+  }
+
+  .float-right {
+    float: right;
+    padding: 0 0 1rem 1rem;
+  }
   
   .img-v {
-    float: right;
+    // float: right;
     width: calc(35% + 6vw);;
   }
 
   .img-h {
-    float: right;
+    // float: right;
     width: calc(45% + 6vw);
   }
 
-  .img-h,
-  .img-v {
-    padding: 0 0 1rem 1rem;
-  }
+  // .img-h,
+  // .img-v {
+  //   padding: 0 0 1rem 1rem;
+  // }
 
 
 }
